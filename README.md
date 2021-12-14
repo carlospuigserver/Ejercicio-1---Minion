@@ -183,8 +183,8 @@ La dirección GitHub de este repositorio es: https://github.com/carlospuigserver
 Para este código, me ha costado pero he entendido como sacar los puntos que era lo más complicado, restando la longitud menos el indice de la letra, pero nose que error cometo que solo me cuenta los puntos de una de las variables, solo me suma las consonantes, y creo además que eso, me suma los puntos de las dos variables, y el total se lo adjudica a uno.
 
 El código que he empleado para realizar el programa es:
-```
-# Declaro las variables
+
+```# Declaro las variables
 palabra=input("Escribe una palabra  ")
 Vocales=['AEIOU']
 l=len(palabra) #longitud de la palabra
