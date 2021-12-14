@@ -37,4 +37,15 @@ def desplazamiento(f,c):
         tablero[f][c]=''
 
            
-
+def alteración(f, c):
+    if f == 0:
+        f = f + 1
+    elif f == 1:
+        if tablero[f+1][c] != ' ':
+            f= f - 1
+        else:
+            f = f + 1
+    elif f == 2:
+        f= f- 1
+    return f
+    
