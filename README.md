@@ -170,7 +170,7 @@ while True:
 if errorx == True and errory == True and errorz == True:
     print("El jugador blanco no se puede mover, ha ganado el jugador negro")
 elif errora == True and errorb == True and errorc == True:
-    print("El jugador negro no se puede mover, ha ganado el jugador blanco")
+    print("El jugador negro no se puede mover, ha ganado el jugador blanco")```
 
 
 
