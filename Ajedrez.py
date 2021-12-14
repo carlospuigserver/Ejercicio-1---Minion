@@ -80,12 +80,12 @@ while True:
 
     impr_tablero(tablero)
 
-    errorx = encerrada(x, 0)
-    errory = encerrada(y, 1)
-    errorz = encerrada(z, 2)
-    errora = encerrada(a, 0)
-    errorb = encerrada(b, 1)
-    errorc = encerrada(c, 2)
+    errorx = inmovil(x, 0)
+    errory = inmovil(y, 1)
+    errorz = inmovil(z, 2)
+    errora = inmovil(a, 0)
+    errorb = inmovil(b, 1)
+    errorc = inmovil(c, 2)
 
     if errorx == True and errory == True and errorz == True:
         print("El jugador blanco no se puede mover, volvemos a crear el tablero")
@@ -106,23 +106,23 @@ while True:
         elif errory == False and errorb == False:
             desplazamiento(y, 1)
             y = alteración(y, 1)
-            errorb = encerrada(b, 1)
+            errorb = inmovil(b, 1)
         elif errorz == False and errorc == False:
             desplazamiento(z, 2)
             z = alteración(z, 2)
-            errorc = encerrada(c, 2)
+            errorc = inmovil(c, 2)
         elif errorx == False:
             desplazamiento(x, 0)
             x = alteración(x, 0)
-            errora = encerrada(a, 0)
+            errora = inmovil(a, 0)
         elif errory == False:
             desplazamiento(y, 1)
             y = alteración(y, 1)
-            errorb = encerrada(b, 1)
+            errorb = inmovil(b, 1)
         elif errorz == False:
             desplazamiento(z, 2)
             z = alteración(z, 2)
-            errorc = encerrada(c, 2)
+            errorc = inmovil(c, 2)
         else:
             break
         turno = 0
@@ -130,27 +130,27 @@ while True:
         if errora == False and errorx == False:
             desplazamiento(a, 0)
             a = alteración(a, 0)
-            errorx = encerrada(x, 0)
+            errorx = inmovil(x, 0)
         elif errorb == False and errory == False:
             desplazamiento(b, 1)
             b = alteración(b, 1)
-            errory = encerrada(y, 1)
+            errory = inmovil(y, 1)
         elif errorc == False and errorz == False:
             desplazamiento(c, 2)
             c = alteración(c, 2)
-            errorz = encerrada(z, 2)
+            errorz = inmovil(z, 2)
         elif errora == False:
             desplazamiento(a, 0)
             a = alteración(a, 0)
-            errorx = encerrada(x, 0)
+            errorx = inmovil(x, 0)
         elif errorb == False:
             desplazamiento(b, 1)
             b = alteración(b, 1)
-            errory = encerrada(y, 1)
+            errory = inmovil(y, 1)
         elif errorc == False:
             desplazamiento(c, 2)
             c = alteración(c, 2)
-            errorc = encerrada(z, 2)
+            errorc = inmovil(z, 2)
         else:
             break
         turno = 1

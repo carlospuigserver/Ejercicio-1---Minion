@@ -1,12 +1,21 @@
 # Declaro las variables
-palabra=input()
+palabra=input("Escribe una palabra  ")
 Vocales=['AEIOU']
 l=len(palabra) #longitud de la palabra
 consonantes=0
 vocales=0
 
+for i in range(l):
+    if palabra[i] in Vocales:
+        vocales+=l-i
+        
+    else:
+        consonantes+=l-i
+        
 
 
+print("Kevin",vocales)
+print("Stuart",consonantes)
 
 
 
