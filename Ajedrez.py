@@ -70,7 +70,7 @@ while True:
     while z == c:
         c = randint(0,2)
 
-    #posicionpiezas
+    
     (tablero[x])[0] = chr(0x2656)
     (tablero[y])[1] = chr(0x2656)
     (tablero[z])[2] = chr(0x2656)
@@ -95,3 +95,67 @@ while True:
         pass
     else:
         break
+
+turno = randint(0, 1)
+while True:
+    if turno == 1:
+        if errorx == False and errora == False:
+            desplazamiento(x, 0)
+            x = alteración(x, 0)
+            errora = inmovil(a, 0)
+        elif errory == False and errorb == False:
+            desplazamiento(y, 1)
+            y = alteración(y, 1)
+            errorb = encerrada(b, 1)
+        elif errorz == False and errorc == False:
+            desplazamiento(z, 2)
+            z = alteración(z, 2)
+            errorc = encerrada(c, 2)
+        elif errorx == False:
+            desplazamiento(x, 0)
+            x = alteración(x, 0)
+            errora = encerrada(a, 0)
+        elif errory == False:
+            desplazamiento(y, 1)
+            y = alteración(y, 1)
+            errorb = encerrada(b, 1)
+        elif errorz == False:
+            desplazamiento(z, 2)
+            z = alteración(z, 2)
+            errorc = encerrada(c, 2)
+        else:
+            break
+        turno = 0
+    elif turno == 0:
+        if errora == False and errorx == False:
+            desplazamiento(a, 0)
+            a = alteración(a, 0)
+            errorx = encerrada(x, 0)
+        elif errorb == False and errory == False:
+            desplazamiento(b, 1)
+            b = alteración(b, 1)
+            errory = encerrada(y, 1)
+        elif errorc == False and errorz == False:
+            desplazamiento(c, 2)
+            c = alteración(c, 2)
+            errorz = encerrada(z, 2)
+        elif errora == False:
+            desplazamiento(a, 0)
+            a = alteración(a, 0)
+            errorx = encerrada(x, 0)
+        elif errorb == False:
+            desplazamiento(b, 1)
+            b = alteración(b, 1)
+            errory = encerrada(y, 1)
+        elif errorc == False:
+            desplazamiento(c, 2)
+            c = alteración(c, 2)
+            errorc = encerrada(z, 2)
+        else:
+            break
+        turno = 1
+    impr_tablero(tablero)
+if errorx == True and errory == True and errorz == True:
+    print("El jugador blanco no se puede mover, ha ganado el jugador negro")
+elif errora == True and errorb == True and errorc == True:
+    print("El jugador negro no se puede mover, ha ganado el jugador blanco")
